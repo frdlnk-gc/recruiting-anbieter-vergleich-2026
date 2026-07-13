@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recruiting-Anbieter-Vergleich 2026 – Kostenloser Report für GaLaBau-Betriebe | GreenCareers</title>
+<meta name="description" content="Stellenportale, Personalvermittlungen, Social Media & Co. im direkten Kostenvergleich. Kostenloser Report 2026 für Inhaber von GaLaBau-Betrieben.">
+<link rel="icon" href="https://gehaltscheck.green-careers.de/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script>
+  // ===== KONFIGURATION =====
+  const LEAD_ENDPOINT = "https://gc-tracking-dashboard.vercel.app/api/lp-builder/lead";
+  const TRACKING_ID = "recruiting-anbieter-vergleich-2026"; // landingpage_url fürs Dashboard-Tracking
+
+  const PIXEL_ID = "634469765867935"; // wird beim Veröffentlichen automatisch gesetzt
+  if (PIXEL_ID && PIXEL_ID !== "634469765867935") {
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', PIXEL_ID); fbq('track','PageView');
+  }
+</script>
+<style>
+  :root{
+    --moss:#243C24;
+    --moss-dark:#1A2C1A;
+    --forest-darkest:#0D1E0D;
+    --poison:#00D261;
+    --accent:#16A34A;
+    --lime:#399939;
+    --earth:#4B4444;
+    --paper:#F8F7F5;
+    --white:#ffffff;
+    --ink:#1A2C1A;
+    --gray:#667066;
+    --border:#E4E2DB;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Poppins',sans-serif;
+    line-height:1.6;
+    color:var(--ink);
+    background:var(--paper);
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  ul{list-style:none;}
+  .container{max-width:1140px;margin:0 auto;padding:0 24px;}
+  section{padding:96px 0;}
+  h1,h2,h3{font-weight:700;line-height:1.2;}
+  .accent{color:var(--poison);}
+  .accent-dark{color:var(--accent);}
+
+  /* Reveal */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease, transform .6s ease;}
+  /* Above-the-fold immer sofort sichtbar — kein Flash of Invisible Content */
+  .hero .reveal{opacity:1 !important;transform:none !important;}
+  .reveal.visible{opacity:1;transform:translateY(0);}
+
+  /* Header */
+  header{
+    position:sticky;top:0;z-index:100;
+    background:rgba(13,30,13,0.92);
+    backdrop-filter:blur(8px);
+    padding:16px 0;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+  }
+  header .container{display:flex;align-items:center;justify-content:space-between;}
+  header img{height:32px;}
+  .header-cta{
+    background:linear-gradient(135deg,#00D261,#399939);
+    color:#fff;padding:10px 20px;border-radius:12px;font-weight:600;font-size:14px;
+    box-shadow:0 4px 14px rgba(0,210,97,0.3);
+  }
+
+  /* Hero */
+  .hero{
+    background:linear-gradient(135deg,#0D1E0D 0%, #1A2C1A 40%, #243C24 100%);
+    padding:80px 0 100px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background-image:radial-gradient(circle at 20% 30%, rgba(0,210,97,0.08) 0, transparent 40%),
+                      radial-gradient(circle at 80% 70%, rgba(0,210,97,0.06) 0, transparent 40%);
+    pointer-events:none;
+  }
+  .hero .container{display:grid;grid-template-columns:1.1fr 0.9fr;gap:60px;align-items:center;position:relative;}
+  .kicker{
+    display:inline-block;
+    text-transform:uppercase;
+    letter-spacing:0.12em;
+    font-size:12px;
+    font-weight:600;
+    color:var(--poison);
+    background:rgba(0,210,97,0.08);
+    border:1px solid rgba(0,210,97,0.4);
+    padding:8px 16px;
+    border-radius:999px;
+    margin-bottom:24px;
+  }
+  .hero h1{
+    color:#fff;font-size:44px;font-weight:700;letter-spacing:-0.01em;margin-bottom:22px;
+  }
+  .hero p.sub{color:#D8DED8;font-size:18px;font-weight:300;max-width:560px;margin-bottom:32px;}
+  .btn-cta{
+    display:inline-flex;align-items:center;gap:10px;
+    background:linear-gradient(135deg,#00D261,#399939);
+    color:#fff;font-weight:700;font-size:16px;
+    padding:18px 32px;border-radius:14px;
+    box-shadow:0 10px 30px rgba(0,210,97,0.35);
+    transition:transform .2s ease, box-shadow .2s ease;
+    border:none;cursor:pointer;
+  }
+  .btn-cta:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(0,210,97,0.45);}
+  .btn-cta .arrow{transition:transform .2s ease;}
+  .btn-cta:hover .arrow{transform:translateX(4px);}
+  .hero-microcopy{color:#9CA89C;font-size:13px;margin-top:14px;}
+
+  /* Report Mockup */
+  .report-mockup{
+    position:relative;
+    width:100%;max-width:340px;margin:0 auto;
+    perspective:1000px;
+  }
+  .report-cover{
+    background:var(--white);
+    border-radius:14px;
+    box-shadow:0 30px 60px rgba(0,0,0,0.35);
+    overflow:hidden;
+    transform:rotate(2deg);
+    position:relative;
+    z-index:2;
+  }
+  .report-band{
+    background:linear-gradient(135deg,#00D261,#16A34A);
+    height:14px;width:100%;
+  }
+  .report-cover-inner{padding:36px 28px 30px;}
+  .report-year{
+    font-size:13px;font-weight:700;letter-spacing:0.1em;color:var(--accent);text-transform:uppercase;margin-bottom:14px;
+  }
+  .report-title{font-size:24px;font-weight:800;color:var(--moss-dark);line-height:1.25;margin-bottom:16px;}
+  .report-sub{font-size:13px;color:var(--gray);font-weight:400;margin-bottom:28px;}
+  .report-divider{height:1px;background:var(--border);margin:20px 0;}
+  .report-footer{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--gray);}
+  .report-footer .dot{width:6px;height:6px;border-radius:50%;background:var(--poison);}
+  .report-stack{
+    position:absolute;top:14px;left:14px;right:-14px;bottom:-14px;
+    background:var(--moss);border-radius:14px;z-index:1;transform:rotate(-3deg);opacity:0.6;
+  }
+
+  /* Trust Band */
+  .trust-band{
+    background:var(--moss-dark);
+    padding:36px 0;
+  }
+  .trust-band .container{
+    display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;text-align:center;
+  }
+  .trust-item{flex:1;min-width:140px;}
+  .trust-item .num{color:var(--poison);font-size:28px;font-weight:800;display:block;}
+  .trust-item .label{color:#B9C4B9;font-size:13px;font-weight:400;}
+
+  /* Pain Section */
+  .pain{background:var(--paper);}
+  .section-head{max-width:680px;margin:0 auto 56px;text-align:center;}
+  .section-kicker{
+    text-transform:uppercase;letter-spacing:0.1em;font-size:12px;font-weight:700;color:var(--accent);margin-bottom:12px;display:block;
+  }
+  .section-head h2{font-size:34px;color:var(--moss-dark);margin-bottom:16px;}
+  .section-head p{color:var(--gray);font-size:16px;font-weight:300;}
+
+  .pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+  .pain-card{
+    background:var(--white);border-radius:18px;padding:32px 28px;
+    box-shadow:0 10px 40px rgba(36,60,36,0.08);
+    border:1px solid var(--border);
+  }
+  .pain-card .icon{font-size:30px;margin-bottom:16px;display:block;}
+  .pain-card h3{font-size:18px;color:var(--moss-dark);margin-bottom:10px;}
+  .pain-card p{color:var(--gray);font-size:14px;font-weight:300;}
+
+  .calibrate{
+    margin-top:48px;background:var(--moss-dark);border-radius:20px;padding:40px 44px;
+    display:flex;align-items:center;gap:28px;flex-wrap:wrap;
+  }
+  .calibrate p{color:#fff;font-size:20px;font-weight:500;flex:1;min-width:260px;}
+  .calibrate span{color:var(--poison);font-weight:700;}
+
+  /* Solution Section */
+  .solution{background:var(--white);}
+  .solution .container{display:grid;grid-template-columns:0.9fr 1.1fr;gap:60px;align-items:start;}
+  .solution-bullets li{
+    display:flex;gap:14px;margin-bottom:20px;align-items:flex-start;
+  }
+  .solution-bullets .check{
+    flex-shrink:0;width:26px;height:26px;border-radius:50%;
+    background:rgba(22,163,74,0.1);color:var(--accent);
+    display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;
+  }
+  .solution-bullets strong{display:block;color:var(--moss-dark);font-size:16px;margin-bottom:2px;}
+  .solution-bullets span.desc{color:var(--gray);font-size:14px;font-weight:300;}
+
+  /* Comparison Table Teaser */
+  .compare-wrap{
+    background:var(--paper);border-radius:20px;padding:36px;
+    box-shadow:0 10px 40px rgba(36,60,36,0.08);
+    border:1px solid var(--border);
+  }
+  .compare-wrap h3{color:var(--moss-dark);font-size:18px;margin-bottom:20px;}
+  table.compare{width:100%;border-collapse:collapse;font-size:13px;}
+  table.compare th{
+    text-align:left;color:var(--gray);font-weight:600;padding:10px 8px;border-bottom:2px solid var(--border);
+    font-size:12px;text-transform:uppercase;letter-spacing:0.04em;
+  }
+  table.compare td{padding:14px 8px;border-bottom:1px solid var(--border);color:var(--ink);}
+  table.compare tr:last-child td{border-bottom:none;font-weight:600;color:var(--moss-dark);background:rgba(0,210,97,0.06);}
+  .blur-cell{filter:blur(4px);user-select:none;}
+  .compare-overlay{
+    position:relative;margin-top:-90px;padding-top:90px;
+    background:linear-gradient(to bottom, rgba(248,247,245,0) 0%, var(--paper) 70%);
+    text-align:center;
+  }
+  .compare-overlay .lock{
+    display:inline-flex;align-items:center;gap:8px;background:var(--white);
+    border:1px solid var(--border);padding:10px 18px;border-radius:999px;
+    font-size:13px;font-weight:600;color:var(--moss-dark);box-shadow:0 6px 20px rgba(0,0,0,0.08);
+  }
+
+  /* Form Section */
+  .form-section{
+    background:linear-gradient(135deg,#0D1E0D 0%, #1A2C1A 50%, #243C24 100%);
+    position:relative;overflow:hidden;
+  }
+  .form-section::before{
+    content:"";position:absolute;inset:0;
+    background-image:radial-gradient(circle at 85% 20%, rgba(0,210,97,0.08) 0, transparent 45%);
+  }
+  .form-section .container{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;position:relative;}
+  .form-copy h2{color:#fff;font-size:32px;margin-bottom:18px;}
+  .form-copy p{color:#C6D0C6;font-size:16px;font-weight:300;margin-bottom:24px;}
+  .form-copy ul li{color:#D8DED8;font-size:14px;margin-bottom:10px;display:flex;gap:10px;align-items:flex-start;}
+  .form-copy ul li::before{content:"✓";color:var(--poison);font-weight:800;}
+
+  .form-card{
+    background:var(--white);border-radius:20px;padding:40px;
+    box-shadow:0 30px 70px rgba(0,0,0,0.35);
+  }
+  .form-card h3{color:var(--moss-dark);font-size:20px;margin-bottom:6px;}
+  .form-card p.form-note{color:var(--gray);font-size:13px;margin-bottom:24px;}
+  .field{margin-bottom:16px;}
+  .field label{display:block;font-size:13px;font-weight:600;color:var(--moss-dark);margin-bottom:6px;}
+  .field input{
+    width:100%;padding:13px 14px;border:1px solid var(--border);border-radius:10px;
+    font-size:15px;font-family:inherit;color:var(--ink);background:var(--paper);
+  }
+  .field input:focus{outline:none;border-color:var(--accent);}
+  .checkbox-field{display:flex;gap:10px;align-items:flex-start;margin-bottom:22px;}
+  .checkbox-field input{width:auto;margin-top:3px;}
+  .checkbox-field label{font-size:12px;color:var(--gray);font-weight:400;}
+  .checkbox-field a{color:var(--accent);text-decoration:underline;}
+  .form-card .btn-cta{width:100%;justify-content:center;}
+
+  .thanks{display:none;text-align:center;padding:20px 0;}
+  .thanks .icon-circle{
+    width:70px;height:70px;border-radius:50%;background:rgba(0,210,97,0.1);
+    display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:32px;
+  }
+  .thanks h3{color:var(--moss-dark);font-size:22px;margin-bottom:10px;}
+  .thanks p{color:var(--gray);font-size:14px;}
+
+  /* Steps */
+  .steps{background:var(--paper);}
+  .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;}
+  .step-card{text-align:center;padding:0 12px;}
+  .step-num{
+    width:56px;height:56px;border-radius:50%;
+    background:linear-gradient(135deg,#00D261,#399939);
+    color:#fff;font-size:22px;font-weight:800;
+    display:flex;align-items:center;justify-content:center;margin:0 auto 20px;
+    box-shadow:0 8px 24px rgba(0,210,97,0.3);
+  }
+  .step-card h3{font-size:18px;color:var(--moss-dark);margin-bottom:10px;}
+  .step-card p{color:var(--gray);font-size:14px;font-weight:300;}
+
+  /* Testimonials */
+  .testimonials{background:var(--white);}
+  .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+  .test-card{
+    background:var(--paper);border-radius:18px;padding:30px 26px;border:1px solid var(--border);
+  }
+  .stars{color:var(--poison);font-size:14px;margin-bottom:14px;}
+  .test-card p.quote{color:var(--ink);font-size:14px;font-weight:400;margin-bottom:18px;font-style:italic;}
+  .test-author{display:flex;align-items:center;gap:12px;}
+  .avatar{
+    width:42px;height:42px;border-radius:50%;background:var(--moss);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;flex-shrink:0;
+  }
+  .test-author .name{font-weight:600;color:var(--moss-dark);font-size:14px;}
+  .test-author .role{color:var(--gray);font-size:12px;}
+
+  /* FAQ */
+  .faq{background:var(--paper);}
+  .faq-list{max-width:760px;margin:0 auto;}
+  .faq-item{background:var(--white);border-radius:14px;margin-bottom:14px;border:1px solid var(--border);overflow:hidden;}
+  .faq-q{
+    padding:20px 24px;display:flex;justify-content:space-between;align-items:center;
+    cursor:pointer;font-weight:600;color:var(--moss-dark);font-size:15px;
+  }
+  .faq-q .plus{font-size:20px;color:var(--accent);transition:transform .2s ease;}
+  .faq-item.open .plus{transform:rotate(45deg);}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;}
+  .faq-a p{padding:0 24px 20px;color:var(--gray);font-size:14px;font-weight:300;}
+  .faq-item.open .faq-a{max-height:220px;}
+
+  /* Final CTA */
+  .final-cta{
+    background:linear-gradient(135deg,#0D1E0D 0%, #1A2C1A 50%, #243C24 100%);
+    text-align:center;padding:90px 0;
+  }
+  .final-cta h2{color:#fff;font-size:32px;margin-bottom:16px;}
+  .final-cta p{color:#C6D0C6;font-size:16px;margin-bottom:32px;}
+
+  /* Footer */
+  footer{background:var(--forest-darkest);padding:40px 0;}
+  footer .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+  footer p{color:#8A968A;font-size:13px;}
+  footer .links a{color:#B9C4B9;font-size:13px;margin-left:18px;}
+  footer .links a:hover{color:#fff;}
+
+  /* Sticky Mobile CTA */
+  .sticky-cta{
+    position:fixed;bottom:0;left:0;right:0;z-index:200;
+    background:var(--moss-dark);padding:14px 20px;
+    display:none;align-items:center;justify-content:space-between;gap:12px;
+    box-shadow:0 -8px 30px rgba(0,0,0,0.3);
+    transform:translateY(100%);transition:transform .3s ease;
+  }
+  .sticky-cta.show{transform:translateY(0);}
+  .sticky-cta span{color:#fff;font-size:13px;font-weight:600;}
+  .sticky-cta a{
+    background:linear-gradient(135deg,#00D261,#399939);color:#fff;
+    padding:12px 20px;border-radius:10px;font-weight:700;font-size:13px;white-space:nowrap;
+  }
+
+  .img-placeholder{
+    border:2px dashed var(--border);border-radius:14px;padding:40px 20px;
+    text-align:center;color:var(--gray);font-size:13px;background:rgba(0,0,0,0.02);
+  }
+
+  @media(max-width:1024px){
+    .hero .container{grid-template-columns:1fr;}
+    .report-mockup{margin-top:40px;}
+    .pain-grid{grid-template-columns:1fr 1fr;}
+    .solution .container{grid-template-columns:1fr;}
+    .form-section .container{grid-template-columns:1fr;}
+    .steps-grid{grid-template-columns:1fr 1fr;}
+    .test-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media(max-width:768px){
+    section{padding:64px 0;}
+    .hero h1{font-size:32px;}
+    .hero p.sub{font-size:16px;}
+    .pain-grid{grid-template-columns:1fr;}
+    .steps-grid{grid-template-columns:1fr;}
+    .test-grid{grid-template-columns:1fr;}
+    .trust-band .container{justify-content:center;}
+    .calibrate{flex-direction:column;text-align:center;}
+    .sticky-cta{display:flex;}
+    footer .container{flex-direction:column;text-align:center;}
+    footer .links a{margin:0 8px;}
+  }
+  @media(max-width:480px){
+    .hero h1{font-size:26px;}
+    .section-head h2{font-size:26px;}
+    .form-card{padding:28px 22px;}
+    .calibrate{padding:28px 24px;}
+    table.compare{font-size:11px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <img src="https://gehaltscheck.green-careers.de/logo.png" alt="GreenCareers Logo">
+    <a href="#formular" class="header-cta">Report sichern</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-copy">
+        <span class="kicker reveal">Kostenloser Report 2026</span>
+        <h1 class="reveal">5 Recruiting-Kanäle im Vergleich: So finden Sie 2026 <span class="accent">Fachkräfte</span>, ohne Ihr Budget zu verbrennen</h1>
+        <p class="sub reveal">Stellenportale, Personalvermittlungen, Social-Media-Anzeigen, Mitarbeiterempfehlungen und Karriereplattformen mit KI-Matching – im direkten Vergleich nach Kosten pro Einstellung, Besetzungsdauer und Planbarkeit. Damit Sie wissen, wo Ihr Recruiting-Budget 2026 tatsächlich wirkt.</p>
+        <a href="#formular" class="btn-cta reveal">Jetzt kostenlosen Report sichern <span class="arrow">→</span></a>
+        <p class="hero-microcopy reveal">PDF, sofort per E-Mail · keine Kreditkarte · keine Verpflichtung</p>
+      </div>
+      <div class="report-mockup reveal">
+        <div class="report-stack"></div>
+        <div class="report-cover">
+          <div class="report-band"></div>
+          <div class="report-cover-inner">
+            <div class="report-year">Report · 2026</div>
+            <div class="report-title">Der große Recruiting-Anbieter-Vergleich für GaLaBau-Betriebe</div>
+            <div class="report-sub">Kosten, Besetzungsdauer & Trefferquote von 5 Recruiting-Kanälen im direkten Vergleich</div>
+            <div class="report-divider"></div>
+            <div class="report-footer"><span class="dot"></span> GreenCareers · Karrierenetzwerk grüne Branche</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAND -->
+  <div class="trust-band">
+    <div class="container">
+      <div class="trust-item reveal"><span class="num">4,9★</span><span class="label">Google-Bewertung</span></div>
+      <div class="trust-item reveal"><span class="num">500+</span><span class="label">Betriebe vertrauen GreenCareers</span></div>
+      <div class="trust-item reveal"><span class="num">30.000+</span><span class="label">Fachkräfte im Netzwerk</span></div>
+      <div class="trust-item reveal"><span class="num">900+</span><span class="label">erfolgreiche Platzierungen</span></div>
+    </div>
+  </div>
+
+  <!-- PAIN -->
+  <section class="pain">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-kicker">Der strukturelle Fachkräftemangel</span>
+        <h2>Sie geben Geld für Recruiting aus – aber wofür genau?</h2>
+        <p>Die meisten GaLaBau-Betriebe nutzen mehrere Kanäle parallel, ohne je verglichen zu haben, welcher davon tatsächlich Landschaftsgärtner, Vorarbeiter oder Bauleiter liefert.</p>
+      </div>
+      <div class="pain-grid">
+        <div class="pain-card reveal">
+          <span class="icon">📋</span>
+          <h3>Stellenanzeigen ohne Resonanz</h3>
+          <p>Anzeige geschaltet, Laufzeit bezahlt – und am Ende zwei, drei unpassende Bewerbungen. Der verdeckte Arbeitsmarkt bleibt unerreicht.</p>
+        </div>
+        <div class="pain-card reveal">
+          <span class="icon">💸</span>
+          <h3>Erfolgshonorare ohne Erfolgsgarantie</h3>
+          <p>Personalvermittlungen verlangen häufig 20–30% eines Jahresgehalts – unabhängig davon, wie lange die Fachkraft tatsächlich bleibt.</p>
+        </div>
+        <div class="pain-card reveal">
+          <span class="icon">⏳</span>
+          <h3>Wochen ohne Bauleiter oder Vorarbeiter</h3>
+          <p>Jede unbesetzte Stelle kostet planbare Aufträge, Überstunden im Team und am Ende Umsatz – Monat für Monat.</p>
+        </div>
+      </div>
+      <div class="calibrate reveal">
+        <p>Was kostet Sie eine unbesetzte Vorarbeiterstelle <span>pro Monat</span> wirklich – in entgangenen Aufträgen, Überstunden und Fehlbesetzungen?</p>
+        <a href="#formular" class="btn-cta">Antworten im Report <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTION -->
+  <section class="solution">
+    <div class="container">
+      <div class="solution-copy">
+        <span class="section-kicker reveal">Das steckt drin</span>
+        <h2 class="reveal" style="font-size:32px;color:var(--moss-dark);margin-bottom:24px;">Ein Report, der Ihnen zeigt, wo Ihr Recruiting-Budget 2026 wirkt</h2>
+        <ul class="solution-bullets">
+          <li class="reveal">
+            <span class="check">✓</span>
+            <div><strong>Kostenvergleich pro Einstellung</strong><span class="desc">Was Stellenportale, Personalvermittlungen, Social-Media-Anzeigen und Karriereplattformen tatsächlich kosten – inklusive versteckter Folgekosten.</span></div>
+          </li>
+          <li class="reveal">
+            <span class="check">✓</span>
+            <div><strong>Zeit bis zur Vertragsunterschrift</strong><span class="desc">Von der Schaltung bis zum ersten Arbeitstag – je Kanal gegenübergestellt.</span></div>
+          </li>
+          <li class="reveal">
+            <span class="check">✓</span>
+            <div><strong>Trefferquote nach Berufsbild</strong><span class="desc">Wie gut jeder Kanal für Landschaftsgärtner, Vorarbeiter und Bauleiter tatsächlich funktioniert.</span></div>
+          </li>
+          <li class="reveal">
+            <span class="check">✓</span>
+            <div><strong>Checkliste nach Betriebsgröße</strong><span class="desc">Welcher Kanal für einen 8-Mann-Betrieb passt – und welcher erst ab 30+ Mitarbeitern sinnvoll wird.</span></div>
+          </li>
+          <li class="reveal">
+            <span class="check">✓</span>
+            <div><strong>Einordnung des KI-Matchings</strong><span class="desc">Wo Karriereplattformen mit KI-Filtermechanismus im Vergleich stehen – ohne Werbeversprechen, mit Zahlen.</span></div>
+          </li>
+        </ul>
+      </div>
+      <div class="compare-wrap reveal">
+        <h3>Auszug: Kanal-Vergleich 2026</h3>
+        <table class="compare">
+          <thead>
+            <tr><th>Kanal</th><th>Kosten/Einstellung</th><th>Zeit bis Besetzung</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Klassisches Stellenportal</td><td class="blur-cell">ca. 800–1.500 €</td><td class="blur-cell">6–10 Wochen</td></tr>
+            <tr><td>Personalvermittlung</td><td class="blur-cell">20–30% Jahresgehalt</td><td class="blur-cell">4–8 Wochen</td></tr>
+            <tr><td>Social-Media-Anzeige</td><td class="blur-cell">variabel, streuverlustig</td><td class="blur-cell">3–6 Wochen</td></tr>
+            <tr><td>Mitarbeiterempfehlung</td><td class="blur-cell">gering, begrenzt skalierbar</td><td class="blur-cell">unregelmäßig</td></tr>
+            <tr><td>Karriereplattform mit KI-Matching</td><td>siehe Report</td><td>3 Kandidaten in 21 Tagen*</td></tr>
+          </tbody>
+        </table>
+        <div class="compare-overlay">
+          <span class="lock">🔒 Vollständige Analyse & Quellen im Report</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section class="form-section" id="formular">
+    <div class="container">
+      <div class="form-copy">
+        <span class="kicker reveal">Kostenloser Download</span>
+        <h2 class="reveal">Sichern Sie sich den vollständigen Report</h2>
+        <p class="reveal">Tragen Sie sich ein und erhalten Sie den kompletten Recruiting-Anbieter-Vergleich 2026 als PDF direkt in Ihr Postfach.</p>
+        <ul>
+          <li class="reveal">Sofort als PDF per E-Mail</li>
+          <li class="reveal">Kostenlos, ohne Verpflichtung</li>
+          <li class="reveal">Keine Anrufe, kein Verkaufsgespräch</li>
+        </ul>
+      </div>
+      <div class="form-card reveal">
+        <div id="formBlock">
+          <h3>Report jetzt anfordern</h3>
+          <p class="form-note">Alle Felder werden vertraulich behandelt.</p>
+          <form id="leadForm">
+            <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;width:0">
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required placeholder="Vor- und Nachname">
+            </div>
+            <div class="field">
+              <label for="firma">Betrieb</label>
+              <input type="text" id="firma" name="firma" required placeholder="Name Ihres GaLaBau-Betriebs">
+            </div>
+            <div class="field">
+              <label for="email">E-Mail</label>
+              <input type="email" id="email" name="email" required placeholder="ihre@email.de">
+            </div>
+            <div class="checkbox-field">
+              <input type="checkbox" id="dsgvo" name="dsgvo" required>
+              <label for="dsgvo">Ich habe die <a href="https://www.green-careers.de/datenschutz" target="_blank" rel="noopener">Datenschutzerklärung</a> gelesen und bin mit der Kontaktaufnahme per E-Mail einverstanden.</label>
+            </div>
+            <button type="submit" class="btn-cta">Jetzt kostenlosen Report sichern <span class="arrow">→</span></button>
+          </form>
+        </div>
+        <div class="thanks" id="thanksBlock">
+          <div class="icon-circle">📩</div>
+          <h3>Fast geschafft!</h3>
+          <p>Der Report ist unterwegs zu Ihnen. Prüfen Sie in wenigen Minuten Ihr Postfach (ggf. auch den Spam-Ordner).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEPS -->
+  <section class="steps">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-kicker">So einfach geht's</span>
+        <h2>In drei Schritten zum vollständigen Report</h2>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card reveal">
+          <div class="step-num">1</div>
+          <h3>Formular ausfüllen</h3>
+          <p>Name, Betrieb, E-Mail – in unter 30 Sekunden erledigt.</p>
+        </div>
+        <div class="step-card reveal">
+          <div class="step-num">2</div>
+          <h3>Report erhalten</h3>
+          <p>Das PDF landet direkt in Ihrem Postfach, sofort abrufbar.</p>
+        </div>
+        <div class="step-card reveal">
+          <div class="step-num">3</div>
+          <h3>Kanäle gezielt einsetzen</h3>
+          <p>Sie wissen, welcher Kanal für Ihren Betrieb 2026 tatsächlich wirkt.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-kicker">Stimmen aus der Branche</span>
+        <h2>Was Betriebe aus dem Vergleich mitgenommen haben</h2>
+      </div>
+      <div class="test-grid">
+        <div class="test-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"Wir haben jahrelang auf ein Stellenportal gesetzt, ohne die Kosten je mit anderen Kanälen zu vergleichen. Der Report hat das für uns sichtbar gemacht."</p>
+          <div class="test-author">
+            <div class="avatar">M</div>
+            <div><div class="name">Markus, Geschäftsführer</div><div class="role">GaLaBau-Betrieb mit 14 Mitarbeitern</div></div>
+          </div>
+        </div>
+        <div class="test-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"Die Zahlen zu den Agenturprovisionen haben mich überzeugt, unser Recruiting-Budget neu aufzuteilen."</p>
+          <div class="test-author">
+            <div class="avatar">S</div>
+            <div><div class="name">Sabine, Inhaberin</div><div class="role">Garten- und Landschaftsbau, 8 Mitarbeiter</div></div>
+          </div>
+        </div>
+        <div class="test-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"Endlich eine nüchterne Gegenüberstellung ohne Verkaufsdruck. Genau das, was wir für unsere Recruiting-Entscheidung 2026 gebraucht haben."</p>
+          <div class="test-author">
+            <div class="avatar">T</div>
+            <div><div class="name">Torben, Bauleiter & Mitinhaber</div><div class="role">GaLaBau-Betrieb mit 22 Mitarbeitern</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-kicker">Häufige Fragen</span>
+        <h2>Bevor Sie sich eintragen</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <div class="faq-q">Ist der Report wirklich kostenlos? <span class="plus">+</span></div>
+          <div class="faq-a"><p>Ja. Sie erhalten den vollständigen Recruiting-Anbieter-Vergleich 2026 ohne Kosten und ohne versteckte Verpflichtung als PDF.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-q">Für wen ist der Report gedacht? <span class="plus">+</span></div>
+          <div class="faq-a"><p>Für Inhaber und Geschäftsführer von GaLaBau-Betrieben, die vor der Entscheidung stehen, in welchen Recruiting-Kanal sie 2026 investieren.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-q">Wie aktuell sind die Daten? <span class="plus">+</span></div>
+          <div class="faq-a"><p>Der Report wurde für 2026 zusammengestellt und berücksichtigt aktuelle Kosten- und Zeitspannen der verglichenen Kanäle.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-q">Muss ich danach etwas kaufen? <span class="plus">+</span></div>
+          <div class="faq-a"><p>Nein. Der Report ist ein unabhängiges Nachschlagewerk. Was Sie mit den Erkenntnissen machen, entscheiden Sie selbst.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-q">Werde ich danach angerufen? <span class="plus">+</span></div>
+          <div class="faq-a"><p>Nein. Sie erhalten ausschließlich den Report per E-Mail – kein Verkaufsgespräch, keine Kaltakquise.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="container">
+      <h2 class="reveal">Finden Sie heraus, wo Ihr Recruiting-Budget 2026 wirklich wirkt</h2>
+      <p class="reveal">Kostenloser Report, sofort als PDF – für Inhaber von GaLaBau-Betrieben.</p>
+      <a href="#formular" class="btn-cta reveal">Jetzt kostenlosen Report sichern <span class="arrow">→</span></a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p>© GreenCareers GmbH</p>
+    <div class="links">
+      <a href="https://www.green-careers.de/impressum" target="_blank" rel="noopener">Impressum</a>
+      <a href="https://www.green-careers.de/datenschutz" target="_blank" rel="noopener">Datenschutz</a>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="stickyCta">
+  <span>Recruiting-Vergleich 2026</span>
+  <a href="#formular">Report sichern</a>
+</div>
+
+<script>
+  // Reveal on scroll
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach((entry, i)=>{
+      if(entry.isIntersecting){
+        setTimeout(()=>entry.target.classList.add('visible'), i%3*100);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.15});
+  revealEls.forEach(el=>observer.observe(el));
+
+  // Sticky mobile CTA
+  const stickyCta = document.getElementById('stickyCta');
+  window.addEventListener('scroll', ()=>{
+    if(window.scrollY > 500){ stickyCta.classList.add('show'); }
+    else { stickyCta.classList.remove('show'); }
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item=>{
+    item.querySelector('.faq-q').addEventListener('click', ()=>{
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+      if(!isOpen) item.classList.add('open');
+    });
+  });
+
+  // Form submit
+  const leadForm = document.getElementById('leadForm');
+  const formBlock = document.getElementById('formBlock');
+  const thanksBlock = document.getElementById('thanksBlock');
+
+  leadForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (this.website && this.website.value) return; // Honeypot: Bot
+
+    const payload = {
+      event: 'lead',
+      tracking_id: TRACKING_ID,
+      name: document.getElementById('name').value,
+      firma: document.getElementById('firma').value,
+      email: document.getElementById('email').value,
+      timestamp: new Date().toISOString(),
+      page_url: window.location.href
+    };
+
+    if (window.fbq) fbq('track','Lead');
+
+    fetch(LEAD_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    }).catch(()=>{});
+
+    formBlock.style.display = 'none';
+    thanksBlock.style.display = 'block';
+  });
+</script>
+
+</body>
+</html>
